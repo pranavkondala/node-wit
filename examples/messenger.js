@@ -9,18 +9,21 @@
 // 1. npm install body-parser express request 
 // 2. Download and install ngrok from https://ngrok.com/download
 // 3. ./ngrok http 8445
-// 4. WIT_TOKEN=your_access_token FB_PAGE_ID=your_page_id FB_PAGE_TOKENEAALNjRd3a4cBAKTPSe3KEqwtjRkiR3k85ZCfsCEqN3T4k2u7vTqFoVXqXlmfofIyMYqqD87IO1jk5sbJUAuoDQARGOcWzhZCOVo2HWEjy07wkF3fyAV3uYMC3ceYtVdCy7jXiC4HAtTB8dVLG5EsQY0APWetxlinZCxEDRPjQZDZD
+// 4. WIT_TOKEN=your_access_token FB_PAGE_ID=your_page_id FB_PAGE_TOKEN=EAALNjRd3a4cBAKTPSe3KEqwtjRkiR3k85ZCfsCEqN3T4k2u7vTqFoVXqXlmfofIyMYqqD87IO1jk5sbJUAuoDQARGOcWzhZCOVo2HWEjy07wkF3fyAV3uYMC3ceYtVdCy7jXiC4HAtTB8dVLG5EsQY0APWetxlinZCxEDRPjQZDZD
 //    FB_VERIFY_TOKEN=788955821206407 node examples/messenger.js
 // 5. Subscribe your page to the Webhooks using verify_token and `http://50032178.ngrok.io/fb` as callback URL.
 // 6. Talk to your bot on Messenger!
-
+WIT_TOKEN= 'UJHPAPX6SCBDBK2JWIVSVE7Z3NG4CPU6' 
+FB_PAGE_ID= '1221873521186313' 
+FB_PAGE_TOKEN='EAALNjRd3a4cBAKTPSe3KEqwtjRkiR3k85ZCfsCEqN3T4k2u7vTqFoVXqXlmfofIyMYqqD87IO1jk5sbJUAuoDQARGOcWzhZCOVo2HWEjy07wkF3fyAV3uYMC3ceYtVdCy7jXiC4HAtTB8dVLG5EsQY0APWetxlinZCxEDRPjQZDZD'
+FB_VERIFY_TOKEN='788955821206407' node examples/messenger.js
 const bodyParser = require('body-parser');
 const express = require('express');
 const request = require('request');
 
 // When not cloning the `node-wit` repo, replace the `require` like so:
 // const Wit = require('node-wit').Wit;
-const Wit = require('../').Wit;
+const Wit = require('node-wit').Wit;
 
 // Webserver parameter
 const PORT = process.env.PORT || 8445;
